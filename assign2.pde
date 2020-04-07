@@ -177,6 +177,13 @@ void draw() {
          if(mousePressed == true) {
            gameState = 2;
            life = 2;
+           cabbageEaten = false;
+           cabbageRandomX = random(0,640-80);
+           cabbageRandomY = random(160,480);
+           soldierRandomY = random(160,480);
+           soldierX=0;
+           GroundhogX = 320;
+           GroundhogY = 80;
          }       
         }
     break;
