@@ -192,13 +192,13 @@ void draw() {
 
 void keyPressed(){
   switch (keyCode){
-      case UP:
+      /*case UP:
         if(GroundhogY < 81){
           GroundhogY = 80;
         }else{
           GroundhogY -= Groundhogtab;
         }
-      break;
+      break;*/
       
       case DOWN:
         if(GroundhogY > height - GROUNDHOG_H - 1){
