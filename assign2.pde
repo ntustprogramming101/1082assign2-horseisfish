@@ -166,7 +166,10 @@ void draw() {
        && GroundhogY+GROUNDHOG_H>soldierY&&GroundhogY<soldierY+SOLDIER_H){
          life--;
          GroundhogX = 320;
-         GroundhogY = 80;                 
+         GroundhogY = 80;
+         downPressed = false; 
+         leftPressed = false;
+         rightPressed = false;         
        }
        if(life==0){
          gameState = 1;
@@ -217,7 +220,7 @@ void draw() {
        && mouseX > startX && mouseY > startY) {
          image(restartHovered, startX, startY, RESTART_W, RESTART_H);
          if(mousePressed == true) {
-           gameState = 2;
+           gameState = 0;
            life = 2;
            cabbageEaten = false;
            cabbageRandomX = random(0,640-80);
@@ -226,6 +229,9 @@ void draw() {
            soldierX=0;
            GroundhogX = 320;
            GroundhogY = 80;
+           downPressed = false; 
+           leftPressed = false;
+           rightPressed = false;
          }       
         }
     break;
